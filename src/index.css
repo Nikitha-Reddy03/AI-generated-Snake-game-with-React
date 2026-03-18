@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "JetBrains Mono", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Orbitron", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: #050505;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.neon-text-green {
+  text-shadow: 0 0 5px rgba(34, 197, 94, 0.5), 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 5px rgba(34, 211, 238, 0.5), 0 0 20px rgba(34, 211, 238, 0.3);
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 5px rgba(236, 72, 153, 0.5), 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+.neon-border-green {
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.2), inset 0 0 10px rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.neon-border-pink {
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.2), inset 0 0 10px rgba(236, 72, 153, 0.1);
+  border-color: rgba(236, 72, 153, 0.5);
+}
+
+.text-stroke-green {
+  position: relative;
+  color: #050505;
+  -webkit-text-stroke: 2px #22c55e;
+  z-index: 1;
+}
+.text-stroke-green::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-text-stroke: 6px #050505;
+  z-index: -1;
+}
+.text-stroke-green::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-text-stroke: 10px #22c55e;
+  z-index: -2;
+  text-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+}
+
+.text-stroke-pink {
+  position: relative;
+  color: #050505;
+  -webkit-text-stroke: 2px #ec4899;
+  z-index: 1;
+}
+.text-stroke-pink::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-text-stroke: 6px #050505;
+  z-index: -1;
+}
+.text-stroke-pink::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-text-stroke: 10px #ec4899;
+  z-index: -2;
+  text-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+
+.text-stroke-green-sm {
+  position: relative;
+  color: #050505;
+  -webkit-text-stroke: 1px #22c55e;
+  z-index: 1;
+}
+.text-stroke-green-sm::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-text-stroke: 4px #050505;
+  z-index: -1;
+}
+.text-stroke-green-sm::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-text-stroke: 6px #22c55e;
+  z-index: -2;
+  text-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 4px;
+}
